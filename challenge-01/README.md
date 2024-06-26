@@ -35,7 +35,7 @@ soma === myvar;
 myvar <= soma;
 
 // Crie uma função chamada `divisao` que receba como parâmetro dois números, e retorne o resultado da divisão entre eles.
-function divisão( x, y ) {
+function divisão(x, y) {
 return x / y;
 }
 
