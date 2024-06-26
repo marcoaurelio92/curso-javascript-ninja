@@ -40,4 +40,4 @@ return x / y;
 }
 
 // Invoque a função criada acima, passando os parâmetros 10 e 2.
-divisão( 10, 2 );
+divisão(10, 2);
