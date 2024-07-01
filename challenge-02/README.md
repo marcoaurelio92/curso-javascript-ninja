@@ -22,17 +22,27 @@ Crie uma função que adicione um valor à variável criada acima, e retorne a s
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
+/* Dessa forma funciona mas não foi o pedido
 function add( x ){
 teste2 = x;
 return 'O valor da variável agora é ' + x;
 }
+*/
+O pedido foi:
+function add() {
+teste2 = 20;
+return 'O valor da variável agora é ' + teste2 + '.';
+}
 
 // Invoque a função criada acima.
-add( 10 );
+add( 10 ); // add();
 
 // Qual o retorno da função? (Use comentários de bloco).
 /*
 'O valor da variável agora é 10'
+*/
+/*
+'O valor da variável agora é 20.'
 */
 
 Crie uma função com as seguintes características:
