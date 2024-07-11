@@ -21,7 +21,7 @@ isTruthy( "" );     //     isTruthy( NaN );
 Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
 */
 isTruthy( 1 );      //     isTruthy( 'olá' );     //    isTruthy( true ); 
-isTruthy( -20 );     //     isTruthy( {} );          //    isTruthy( '22' ); 
+isTruthy( -20 );     //     isTruthy( {} );          //    isTruthy( function() {} ); 
 isTruthy( 'a' );     //     isTruthy( [] );
 isTruthy( "um" );     //     isTruthy( 1.8 );
 
