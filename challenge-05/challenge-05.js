@@ -63,47 +63,58 @@ os livros.
 */
 function book( livro ){
   let livros = {
-    HarryPotter: {
+    HarryPotter : {
       quantidadePaginas: 264,
       autor: 'J. K. Rowling',
       editora: 'Rocco'
     },
-    Pinoquio: {
+    Pinóquio : {
       quantidadePaginas: 192,
       autor: 'Carlo Collodi',
       editora: 'Pelicano'
     },
-    TheWitcher: {
+     TheWitcher : {
       quantidadePaginas: 320,
       autor: 'Andrzej Sapkowski',
       editora: 'WMF Martins Fontes'
     }
-  }
+  };
   
+  if( livro === undefined ){
+    return livros;
+  } else if( livro === 'HarryPotter' ){
+    return livros.HarryPotter;
+  } else if( livro === 'Pinóquio' ){
+    return livros.Pinóquio;
+  } else if( livro === 'TheWitcher' ){
+    return livros.TheWitcher;
+  } else{
+    return 'Livro inexistente no banco de dados.';
+  }
 };
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
-// ?
+console.log(book());
 
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-// ?
+console.log('O livro Harry Potter tem ' + book('HarryPotter').quantidadePaginas + ' páginas!');
 
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
-// ?
+console.log('O autor do livro Harry Potter é ' + book('HarryPotter').autor + '.');
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-// ?
+console.log('O livro Harr foi publicado pela editora [NOME_DA_EDITORA].');
