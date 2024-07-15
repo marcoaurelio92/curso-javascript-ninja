@@ -61,7 +61,26 @@ propriedades:
 - Se o parâmetro não for passado, a função deve retornar o objeto com todos
 os livros.
 */
-// ?
+function book( livro ){
+  let livros = {
+    HarryPotter: {
+      quantidadePaginas: 264,
+      autor: 'J. K. Rowling',
+      editora: 'Rocco'
+    },
+    Pinoquio: {
+      quantidadePaginas: 192,
+      autor: 'Carlo Collodi',
+      editora: 'Pelicano'
+    },
+    TheWitcher: {
+      quantidadePaginas: 320,
+      autor: 'Andrzej Sapkowski',
+      editora: 'WMF Martins Fontes'
+    }
+  }
+  
+};
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
