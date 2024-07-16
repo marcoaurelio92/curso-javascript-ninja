@@ -35,17 +35,17 @@ let dif = [
   true,
   { prop1: 'carro', prop2: true, prop3: 49 },
   undefined
-  ]
+  ];
 
 /*
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
-myFunction2( dif, 0 ); // 1
-myFunction2( dif, 1 ); // 'vasco'
-myFunction2( dif, 2 ); // true
-myFunction2( dif, 3 ); // { prop1: 'carro', prop2: true, prop3: 49 }
-myFunction2( dif, 4 ); // undefined
+console.log(myFunction2( dif, 0 )); // 1
+console.log(myFunction2( dif, 1 )); // 'vasco'
+console.log(myFunction2( dif, 2 )); // true
+console.log(myFunction2( dif, 3 )); // { prop1: 'carro', prop2: true, prop3: 49 }
+console.log(myFunction2( dif, 4 )); // undefined
 
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
@@ -63,35 +63,25 @@ os livros.
 */
 function book( livro ){
   let livros = {
-    HarryPotter : {
+    'Harry Potter' : {
       quantidadePaginas: 264,
       autor: 'J. K. Rowling',
       editora: 'Rocco'
     },
-    Pinóquio : {
+    'Pinóquio' : {
       quantidadePaginas: 192,
       autor: 'Carlo Collodi',
       editora: 'Pelicano'
     },
-     TheWitcher : {
+     'The Witcher' : {
       quantidadePaginas: 320,
       autor: 'Andrzej Sapkowski',
       editora: 'WMF Martins Fontes'
     }
   };
   
-  if( livro === undefined ){
-    return livros;
-  } else if( livro === 'HarryPotter' ){
-    return livros.HarryPotter;
-  } else if( livro === 'Pinóquio' ){
-    return livros.Pinóquio;
-  } else if( livro === 'TheWitcher' ){
-    return livros.TheWitcher;
-  } else{
-    return 'Livro inexistente no banco de dados.';
-  }
-};
+  return !livro ? livros : livros[ livro ];
+}
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
@@ -103,18 +93,19 @@ Ainda com a função acima, imprima a quantidade de páginas de um livro qualque
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-console.log('O livro Harry Potter tem ' + book('HarryPotter').quantidadePaginas + ' páginas!');
+let livro = 'Harry Potter';
+console.log('O livro ' + livro + ' tem ' + book(livro).quantidadePaginas + ' páginas!');
 
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
-console.log('O autor do livro Harry Potter é ' + book('HarryPotter').autor + '.');
+console.log('O autor do livro ' + livro + ' é ' + book(livro).autor + '.');
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-console.log('O livro Harr foi publicado pela editora [NOME_DA_EDITORA].');
+console.log('O livro ' + livro + ' foi publicado pela editora ' + book(livro).editora + '.');
