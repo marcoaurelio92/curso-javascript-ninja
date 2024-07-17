@@ -37,7 +37,7 @@ let dif = [
   undefined
   ];
 
-/*
+/*  
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
@@ -61,28 +61,26 @@ propriedades:
 - Se o parâmetro não for passado, a função deve retornar o objeto com todos
 os livros.
 */
-function book( livro ){
+function book( titulo ) {
   let livros = {
-    'Harry Potter' : {
+    'Harry Potter': {
       quantidadePaginas: 264,
       autor: 'J. K. Rowling',
       editora: 'Rocco'
     },
-    'Pinóquio' : {
+    'Pinóquio': {
       quantidadePaginas: 192,
       autor: 'Carlo Collodi',
       editora: 'Pelicano'
     },
-     'The Witcher' : {
+    'The Witcher': {
       quantidadePaginas: 320,
       autor: 'Andrzej Sapkowski',
-      editora: 'WMF Martins Fontes'
+      editora: '‎WMF Martins Fontes'
     }
-  };
-  
-  return !livro ? livros : livros[ livro ];
+  }
+  return !!titulo ? livros[titulo] : livros
 }
-
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
