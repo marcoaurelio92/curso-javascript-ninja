@@ -57,8 +57,8 @@ função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
 */
 showTeamPosition( 1 ); // O time que está em 1º lugar é o Botafogo.
 showTeamPosition( 2 ); // O time que está em 2º lugar é o Palmeiras.
-showTeamPosition( 9 ); // Vasco da Gama
-showTeamPosition( 20 ); // Fluminense
+showTeamPosition( 3 ); // O time que está em 3º lugar é o Vasco da Gama.
+showTeamPosition( 6 ); // Não temos a informação do time que está nessa posição.
 
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
