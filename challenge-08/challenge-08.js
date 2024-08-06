@@ -108,7 +108,7 @@ var mod = calculator('%');
 Faça uma operação com cada uma das funções criadas acima, mostrando o resultado
 no console.
 */
-console.log(subtraction(2, 2));
-console.log(multiplication(2, 2));
-console.log(division(2, 2));
-console.log(mod(2, 2));
+console.log(subtraction(2, 2));  // Resultado da operação: 2 - 2 = 0.
+console.log(multiplication(2, 2));  // Resultado da operação: 2 * 2 = 4.
+console.log(division(2, 2));  //  Resultado da operação: 2 / 2 = 1. 
+console.log(mod(2, 2));  //  Resultado da operação: 2 % 2 = 0.
