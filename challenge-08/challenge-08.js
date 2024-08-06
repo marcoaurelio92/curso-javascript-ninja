@@ -58,22 +58,29 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
 */
 function calculator( sinal ) {
  return function( x, y ) {
+   var result;
    
    switch( sinal ) {
      case '+':
-       return 'Resultado da operação: ' + x + ' ' + sinal + ' ' + y + ' = ' + ( x + y ) + '.';
+       result = x + y;
+       break;
      case '-':
-       return 'Resultado da operação: ' + x + ' ' + sinal + ' ' + y + ' = ' + ( x - y ) + '.';
+       result = x - y;
+       break;
      case '*':
-       return 'Resultado da operação: ' + x + ' ' + sinal + ' ' + y + ' = ' + ( x * y ) + '.';
+       result = x * y;
+       break;
      case '/':
-       return 'Resultado da operação: ' + x + ' ' + sinal + ' ' + y + ' = ' + ( x / y ) + '.';
+       result = x / y;
+       break;
      case '%':
-       return 'Resultado da operação: ' + x + ' ' + sinal + ' ' + y + ' = ' + ( x % y ) + '.';
+       result = x % y;
+       break;
      default:
        return 'Operação inválida.';
    } 
-  }
+   return 'Resultado da operação: ' + x + ' ' + sinal + ' ' + y + ' = ' + result + '.';
+  };
 }
 
 /*
