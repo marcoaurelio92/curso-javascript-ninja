@@ -60,29 +60,13 @@ parâmetros;
 operador passado para a função "calculator", e passando para esse método
 os dois parâmetros da função de retorno de "calculator".
 */
-function calculator( operation ) {
-  if( operation === '+' || operation === '-' || operation === '*' || operation === '/' || operation === '%' ) {
-    let oper = operation;
+function calculator( oper ) {
+  if( oper === '+' || oper === '-' || oper === '*' || oper === '/' || oper === '%' ) {
     return function( num1, num2 ) {
       if( typeof num1 !== 'number' || typeof num2 !== 'number' ) {
         return false;
       };
-      switch(oper) {
-        case '+':
-          return (num1 + num2);
-    
-        case '-':
-          return (num1 - num2);
-        
-        case '*':
-          return (num1 * num2);
-          
-        case '/':
-          return (num1 / num2);
-          
-        case '%':
-          return (num1 % num2); 
-      };
+      return operation[oper]( num1, num2 )  
     };
   };
   return false;
@@ -126,9 +110,8 @@ variável chamada "sum", que receba a função "calculator", passando por
 parâmetro a variável que recebeu o sinal da operação.
 */
 operationSignal = '+';
-let sum = function calculator( operationSignal ) {
+let sum = calculator(operationSignal)
   
-};
 /*
 PASSO 3:
 "sum" agora é uma função, e, se o sinal correto não foi passado para a
@@ -141,18 +124,46 @@ parâmetros para o método "log" de "console":
 - O segundo, a função de soma, passando os dois operandos.
 - Se "sum" for "false", mostrar no console a mensagem de erro.
 */
-// ?
+number1 = 10;
+number2 = 20;
+console.log( calculator(operationSignal)(number1, number2) );
 
+console.log( showOperationMessage( operationSignal, number1, number2 ) );
+console.log( sum(number1, number2) );
+operationSignal = 'asd';
+sum = calculator(operationSignal);
+console.log( showErrorMessage( operationSignal ) );
+  
 /*
 Repita desde o "PASSO 2" com as operações de subtração, multiplicação,
 divisão e resto. Crie variáveis com os nomes "subtraction",
 "multiplication", "division" e "mod".
 */
-// ?
+let operationSignal2 = '-';
+let operationSignal3 = '*';
+let operationSignal4 = '/';
+let operationSignal5 = '%';
+
+let subtraction = calculator(operationSignal2);
+  console.log( showOperationMessage( operationSignal2, number2, number1 ) );
+  console.log( subtraction(number2, number1) );
+let multiplication = calculator(operationSignal3);
+  console.log( showOperationMessage( operationSignal3, number2, number1 ) );
+  console.log( multiplication(number2, number1) );
+let division = calculator(operationSignal4);
+  console.log( showOperationMessage( operationSignal4, number2, number1 ) );
+  console.log( division(number2, number1) );
+let mod = calculator(operationSignal5);
+  console.log( showOperationMessage( operationSignal5, number2, number1 ) );
+  console.log( mod(number2, number1) );
+
 
 /*
 Repita o PASSO 2 novamente, mas passando um operador inválido, para ver se
 a mensagem de erro será mostrada no console.
 */
-// ?
+operationSignal = 'asd';
+sum = calculator(operationSignal);
+  console.log( showErrorMessage( operationSignal ) );
+
 } ) ();
