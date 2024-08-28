@@ -13,7 +13,7 @@
 
   do{
     console.log( 'Entrou ao menos uma vez!' );
-  } while( once === true );
+  } while( once );
   
   /*
   Crie um objeto chamado `person`, que receba as seguintes propriedades:
@@ -77,7 +77,6 @@
   
   for( let contador = 0; numbers.length <= 20; contador++ ) {
     if( contador > 10 ) {
-      console.log( numbers );
       break;
     }
     
@@ -94,6 +93,7 @@
   console.log( numbers );
   
   numbers = [];
+  
   for( let contador = 0; numbers.length <= 10; contador++ ) {
     if( contador % 2 === 1 ) {
       continue;
