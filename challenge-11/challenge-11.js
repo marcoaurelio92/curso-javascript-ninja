@@ -91,7 +91,14 @@
   esses. Se o número for ímpar, pular para o próximo número.
   Mostrar no console os números do array.
   */
-  console.log( 'Pares de 0 a 20:' );
-  // ?
+  console.log( numbers );
+  
+  numbers = [];
+  for( let contador = 0; numbers.length <= 10; contador++ ) {
+    if( contador % 2 === 1 ) {
+      continue;
+    }
+    numbers.push( contador );
+  }
   
 } )();
