@@ -52,15 +52,38 @@
   Após a função, mostrar a mensagem no console:
   'The person has more than 25 years old? [TRUE/FALSE]'
   */
-  // ?
+  function moreThan( idade ) {
+    return person.age > idade; 
+  }
+
+  console.log( 'The person has more than 25 years old? ' + moreThan(25) );
   
   /*
   Faça um loop de 0 a 20, que adicione cada número como um item de um
   array chamado `numbers`. Se o contador for maior que 10, saia do loop.
   Mostre no console os números no array.
   */
-  console.log( 'De 0 a 10:' );
-  // ?
+  for( let numbers = [], contador = 0; numbers.length <= 20; contador++ ) {
+    if( contador > 10 ) {
+      console.log( numbers );
+      break;
+    }
+    
+    numbers.push( contador );
+  }
+  /*
+  console.log( numbers );
+  let numbers = [];
+  
+  for( let contador = 0; numbers.length <= 20; contador++ ) {
+    if( contador > 10 ) {
+      console.log( numbers );
+      break;
+    }
+    
+    numbers.push( contador );
+  }
+  */
   
   /*
   Faça outro loop de 0 a 20, que adicione a um array chamado `numbers` (já
