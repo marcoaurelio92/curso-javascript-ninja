@@ -1,4 +1,4 @@
-( function() {
+??( function() {
   
   /*
   Envolva todo o conteúdo desse arquivo em uma IIFE.
@@ -75,15 +75,14 @@
   /*
   Converta os livros novamente para objeto.
   */
-  // ?
-  console.log( '\nAgora os livros são objetos novamente:' );
+  console.log( '\nAgora os livros são objetos novamente:', JSON.parse(str2) );
   
   /*
   Mostre no console todas as propriedades e valores de todos os livros,
   no formato abaixo:
       "[PROPRIEDADE]: [VALOR]"
   */
-  // ?
+  Object.keys(books).join(', ');
   
   /*
   Crie um array chamado `myName`. Cada item desse array deve ser uma letra do
