@@ -82,7 +82,6 @@
   no formato abaixo:
       "[PROPRIEDADE]: [VALOR]"
   */
-  Object.keys(books).join(', ');
   
   /*
   Crie um array chamado `myName`. Cada item desse array deve ser uma letra do
