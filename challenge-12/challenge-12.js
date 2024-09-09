@@ -1,4 +1,4 @@
-??( function() {
+( function() {
   
   /*
   Envolva todo o conteúdo desse arquivo em uma IIFE.
@@ -63,7 +63,7 @@
   /*
   Converta os objetos que ficaram em `books` para strings.
   */
-  let str2 = JSON.stringfy(books);
+  let str2 = JSON.stringify(books);
   
   console.log( '\nLivros em formato string:' );
   
@@ -82,30 +82,37 @@
   no formato abaixo:
       "[PROPRIEDADE]: [VALOR]"
   */
+  console.log( books.toString() );
   
   /*
   Crie um array chamado `myName`. Cada item desse array deve ser uma letra do
   seu nome. Adicione seu nome completo no array.
   */
-  // ?
+  var myName = [];
+  myName[0] = 'M';
+  myName[1] = 'a';
+  myName[2] = 'r';
+  myName[3] = 'c';
+  myName[4] = 'o';
+  
   console.log( '\nMeu nome é:' );
   
   /*
   Juntando todos os itens do array, mostre no console seu nome.
   */
-  // ?
+  console.log( myName.join('') );
   
   console.log( '\nMeu nome invertido é:' );
   
   /*
   Ainda usando o objeto acima, mostre no console seu nome invertido.
   */
-  // ?
+  console.log( myName.reverse() );
   
   console.log( '\nAgora em ordem alfabética:' );
   /*
   Mostre todos os itens do array acima, odenados alfabéticamente.
   */
-  // ?
+  console.log( myName.sort() );
   
 } )();
