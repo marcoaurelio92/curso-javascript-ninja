@@ -16,15 +16,15 @@
     name: 'Marco Aurélio',
     lastname: 'de Souza Andrade Mesquita',
     age: 32
-  }
+  };
   
-  console.log( 'Propriedades de "person": ', person );
+  console.log( 'Propriedades de "person":' );
 
   /*
   Mostre no console, em um array, todas as propriedades do objeto acima.
   Não use nenhuma estrutura de repetição, nem crie o array manualmente.
   */
-  console.log( 'Propriedades de "person": ', Object.keys(person) );
+  console.log( Object.keys(person) );
   
   /*
   Crie um array vazio chamado `books`.
@@ -41,7 +41,7 @@
   books.push( { name: 'Churchill', pages: 815 } );
   books.push( { name: 'O calculista', pages: 476 } );
   
-  console.log( '\nLista de livros:', );
+  console.log( '\nLista de livros:' );
   
   /*
   Mostre no console todos os livros.
@@ -63,37 +63,37 @@
   /*
   Converta os objetos que ficaram em `books` para strings.
   */
-  let str2 = JSON.stringify(books);
+  books = JSON.stringify(books);
   
   console.log( '\nLivros em formato string:' );
   
   /*
   Mostre os livros nesse formato no console:
   */
-  console.log( str2 );
+  console.log( books );
   
   /*
   Converta os livros novamente para objeto.
   */
-  console.log( '\nAgora os livros são objetos novamente:', JSON.parse(str2) );
+  books = JSON.parse(books);
+  console.log( '\nAgora os livros são objetos novamente:' );
   
   /*
   Mostre no console todas as propriedades e valores de todos os livros,
   no formato abaixo:
       "[PROPRIEDADE]: [VALOR]"
   */
-  console.log( books.toString() );
+  for( var i = 0; i < books.length; i++ ) {
+    for( var prop in books[i] ) {
+      console.log( prop + ': ' + books[i][prop] );
+    }
+  }
   
   /*
   Crie um array chamado `myName`. Cada item desse array deve ser uma letra do
   seu nome. Adicione seu nome completo no array.
   */
-  var myName = [];
-  myName[0] = 'M';
-  myName[1] = 'a';
-  myName[2] = 'r';
-  myName[3] = 'c';
-  myName[4] = 'o';
+  var myName = [ 'M', 'a', 'r', 'c', 'o' ];
   
   console.log( '\nMeu nome é:' );
   
@@ -107,12 +107,12 @@
   /*
   Ainda usando o objeto acima, mostre no console seu nome invertido.
   */
-  console.log( myName.reverse() );
+  console.log( myName.reverse().join( '' ) );
   
   console.log( '\nAgora em ordem alfabética:' );
   /*
   Mostre todos os itens do array acima, odenados alfabéticamente.
   */
-  console.log( myName.sort() );
+  console.log( myName.sort().join( '' ) );
   
 } )();
