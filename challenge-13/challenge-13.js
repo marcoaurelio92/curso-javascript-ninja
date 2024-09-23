@@ -12,6 +12,7 @@
   var arr = [ 1, 2, 3, 4, 5 ];
 
   console.log( arr.toString() );
+  //  console.log( [ 1, 2, 3, 4, 5 ].toString() );
   
   /*
   Crie 2 arrays `sul` e `sudeste`, que serão as regiões do Brasil.
@@ -26,8 +27,7 @@
   concatenadas. Mostre o `brasil` no console.
   */
   console.log( '\nAlguns Estados do Brasil:' );
-  var brasil = [];
-  brasil = brasil.concat( sul, sudeste );
+  var brasil = sul.concat( sudeste );
 
   console.log( brasil );
   
@@ -46,6 +46,7 @@
   var delFirst = brasil.shift();
 
   console.log( delFirst );
+  //  console.log( brasil.shift() );
   
   /*
   Crie um novo array chamado `newSul`, que receba somente os estados do sul,
@@ -86,9 +87,13 @@
   Adicione os estados do `nordeste` ao array `brasil`. Esses estados devem
   ficar no mesmo nível que os estados já existentes, não em um array separado.
   */
+  brasil = brasil.concat( nordeste );
+  
+  /*
   nordeste.forEach( function( item, index, array ) {
     brasil.push(item);
   } );
+  */
   
   /*
   Mostre no console os estados em `newSudeste`.
@@ -156,7 +161,7 @@
   Atribua o novo array a uma variável chamada `map`.
   */
   var map = newBrasil.map( function( item, index, array ) {
-    return { id: ++index, estado: item.estado + " pertence ao Brasil." }
+    return { id: ++index, estado: item.estado + " pertence ao Brasil." };
    } );
   
   /*
