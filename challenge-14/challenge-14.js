@@ -49,8 +49,10 @@
   */
   console.log( '\nOperation:' );
   var operation = justMod2Or3.reduce( function( acumulado, atual, index, array ) {
-    
+    return (atual++) * atual
   } );
+
+  console.log( operation );
   
   /*
   Faça o mesmo cálculo passado acima, mas começando do último item para o
@@ -58,7 +60,11 @@
   console.
   */
   console.log( '\nOperation 2:' );
-  // ?
+  var operation2 = justMod2Or3.reduceRight( function( acumulado, atual, index, array ) {
+    return ( atual++ ) * atual;
+  } );
+
+  console.log( operation2 );
   
   /*
   Crie um array chamado `name`. Cada elemento desse array deve ser uma sílaba
