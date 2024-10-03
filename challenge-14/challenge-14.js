@@ -75,14 +75,23 @@
   falada, como se você estivesse falando em código xD
   */
   console.log( '\nSeu nome na língua do "P":' );
-  // ?
+  var name = [ 'Mar', 'co' ];
+  var p = name.reduce( function( acumulado, atual, index, array ) {
+    return acumulado + atual;
+  }, 'p' );
+
+  console.log( p );
   
   /*
   Crie uma variável chamada `inversedName`, que reduzirá o array em uma string
   e atribuirá o seu nome invertido (usando o array criado acima).
   */
   console.log( '\nInversed Name:' );
-  // ?
+  var inversedName = name.reduceRight( function( acumulado, atual, index, array ) {
+    return (acumulado + atual).toString();
+  } );
+
+  console.log( inversedName );
   
   /*
   Mostre no console o array `numberObjects`.
